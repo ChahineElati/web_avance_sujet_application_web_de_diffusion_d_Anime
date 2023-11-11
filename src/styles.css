@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: openSans;
+    src: url(assets/fonts/static/OpenSans-Medium.ttf);
+}
+
+
+body {
+    background-color: #345DA7;
+    color: #DEF3F6;
+    font-family: openSans;
+}
