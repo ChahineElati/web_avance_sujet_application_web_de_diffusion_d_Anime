@@ -1,1 +1,25 @@
-<app-home></app-home>
+<div class="header">
+    <nav>
+        <li>Home</li>
+        <li>Anime List</li>
+        <li>Trending</li>
+    </nav>
+    <div class="form">
+        <table>
+            <tr>
+                <td><app-inp placeHolder="Email"></app-inp></td>
+                <td><app-inp type="password" placeHolder="Password"></app-inp></td>
+                <td><app-btn value="Sign In"></app-btn></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Forgot Password</td>
+                <td>Create Account</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="content">
+    <app-home></app-home>
+</div>

@@ -1,0 +1,17 @@
+input {
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    padding: 5px;
+    padding-left: 15px;
+    width: 250px;
+}
+
+img {
+    border-radius: 50%;
+    width: 25px;
+    position: relative;
+    left: -27px;
+    top: 7px;
+    background-color: black;
+}
