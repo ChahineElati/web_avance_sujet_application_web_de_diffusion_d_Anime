@@ -7,6 +7,7 @@ import { InpComponent } from './components/inp/inp.component';
 import { FormsModule } from '@angular/forms';
 import { BtnComponent } from './components/btn/btn.component';
 import { SrchBarComponent } from './components/srch-bar/srch-bar.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SrchBarComponent } from './components/srch-bar/srch-bar.component';
     HomeComponent,
     InpComponent,
     BtnComponent,
-    SrchBarComponent
+    SrchBarComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
