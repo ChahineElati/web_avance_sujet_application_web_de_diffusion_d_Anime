@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { BtnComponent } from './components/btn/btn.component';
 import { SrchBarComponent } from './components/srch-bar/srch-bar.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import { AnimeListComponent } from './pages/anime-list/anime-list.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CategoriesComponent } from './pages/categories/categories.component';
     InpComponent,
     BtnComponent,
     SrchBarComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AnimeListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

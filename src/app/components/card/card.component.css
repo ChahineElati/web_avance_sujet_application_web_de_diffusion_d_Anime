@@ -1,0 +1,15 @@
+img {
+    width: 250px;
+}
+.card {
+    text-align: start;
+    width: 250px;
+    background-color: #3B8AC4;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.card div {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
