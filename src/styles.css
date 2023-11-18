@@ -57,3 +57,9 @@ li {
     padding-top: 10px;
     width: 400px;
 }
+
+a {
+    text-decoration: none;
+    color: #DEF3F6;
+    
+}

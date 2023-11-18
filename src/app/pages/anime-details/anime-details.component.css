@@ -1,0 +1,55 @@
+div {
+    float: left;
+}
+
+.img{
+    text-align: start;
+    width: 250px;
+    margin-left: 130px;
+}
+
+.img .anime-img {
+    display: block;
+    padding-top: 60px;
+    width: 250px;
+    padding-bottom: 10px;
+}
+
+.icon {
+    width: 18px;
+}
+
+.img div b{
+    position: relative;
+    top: -2px;
+    left: 10px;
+    user-select: none;
+}
+
+.img div {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.description {
+    width: 800px;
+    text-align: start;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.episodes {
+    margin: 50px;
+    margin-left: 150px;
+}
+
+.episodes h2 {
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+a {
+    background-color: #3B8AC4;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
