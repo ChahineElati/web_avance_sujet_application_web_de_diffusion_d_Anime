@@ -11,6 +11,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { AnimeListComponent } from './pages/anime-list/anime-list.component';
 import { CardComponent } from './components/card/card.component';
 import { AnimeDetailsComponent } from './pages/anime-details/anime-details.component';
+import { EpisodeComponent } from './pages/episode/episode.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AnimeDetailsComponent } from './pages/anime-details/anime-details.compo
     CategoriesComponent,
     AnimeListComponent,
     CardComponent,
-    AnimeDetailsComponent
+    AnimeDetailsComponent,
+    EpisodeComponent
   ],
   imports: [
     BrowserModule,
