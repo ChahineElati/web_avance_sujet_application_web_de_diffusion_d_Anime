@@ -12,6 +12,7 @@ import { AnimeListComponent } from './pages/anime-list/anime-list.component';
 import { CardComponent } from './components/card/card.component';
 import { AnimeDetailsComponent } from './pages/anime-details/anime-details.component';
 import { EpisodeComponent } from './pages/episode/episode.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EpisodeComponent } from './pages/episode/episode.component';
     AnimeListComponent,
     CardComponent,
     AnimeDetailsComponent,
-    EpisodeComponent
+    EpisodeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
