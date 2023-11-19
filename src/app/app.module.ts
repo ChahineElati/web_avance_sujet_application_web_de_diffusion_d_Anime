@@ -13,6 +13,7 @@ import { CardComponent } from './components/card/card.component';
 import { AnimeDetailsComponent } from './pages/anime-details/anime-details.component';
 import { EpisodeComponent } from './pages/episode/episode.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     CardComponent,
     AnimeDetailsComponent,
     EpisodeComponent,
-    ProfileComponent
+    ProfileComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
