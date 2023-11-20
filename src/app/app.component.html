@@ -1,7 +1,7 @@
 <div class="header">
     <nav>
-        <li>Home</li>
-        <li>Anime List</li>
+        <a routerLink=""><li>Home</li></a>
+        <a routerLink="categories"><li>Anime List</li></a>
         <li>Trending</li>
     </nav>
     <div class="form">
@@ -21,11 +21,5 @@
 </div>
 
 <div class="content">
-    <app-favorites></app-favorites>
-    <!-- <app-profile></app-profile> -->
-    <!-- <app-episode></app-episode> -->
-    <!-- <app-anime-details></app-anime-details> -->
-    <!-- <app-anime-list></app-anime-list> -->
-    <!-- <app-categories></app-categories> -->
-    <!-- <app-home></app-home> -->
+    <router-outlet></router-outlet>
 </div>

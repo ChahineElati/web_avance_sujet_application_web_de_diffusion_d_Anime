@@ -2,6 +2,7 @@ img {
     width: 250px;
 }
 .card {
+    display: inline-block;
     text-align: start;
     width: 250px;
     background-color: #3B8AC4;

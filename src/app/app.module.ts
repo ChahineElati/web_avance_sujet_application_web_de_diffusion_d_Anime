@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,6 +16,16 @@ import { EpisodeComponent } from './pages/episode/episode.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'categories', component: CategoriesComponent,},
+  {path: 'categories/animelist', component: AnimeListComponent},
+  {path: 'categories/animelist/animedetails', component: AnimeDetailsComponent},
+  {path: 'categories/animelist/animedetails/episode', component: EpisodeComponent},
+  {path: 'favorites', component: FavoritesComponent},
+  {path: 'profile', component: ProfileComponent},
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +39,12 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     AnimeDetailsComponent,
     EpisodeComponent,
     ProfileComponent,
-    FavoritesComponent
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
