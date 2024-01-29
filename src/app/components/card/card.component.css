@@ -1,13 +1,13 @@
 img {
     width: 250px;
+    height: 350px;
 }
 .card {
     display: inline-block;
     text-align: start;
     width: 250px;
     background-color: #3B8AC4;
-    margin: auto;
-    margin-bottom: 10px;
+    margin: 25px;
 }
 
 .card div {
