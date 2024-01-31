@@ -19,14 +19,15 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { PopularComponent } from './pages/popular/popular.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'categories', component: CategoriesComponent,},
-  {path: 'categories/animelist', component: AnimeListComponent},
-  {path: 'categories/animelist/animedetails', component: AnimeDetailsComponent},
-  {path: 'categories/animelist/animedetails/episode', component: EpisodeComponent},
-  {path: 'favorites', component: FavoritesComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'popular', component: PopularComponent}
+  { path: '', component: HomeComponent },
+  { path: 'categories', component: CategoriesComponent, },
+  { path: 'categories/animelist', component: AnimeListComponent },
+  { path: 'categories/animelist/animedetails', component: AnimeDetailsComponent },
+  { path: 'categories/animelist/animedetails/episode', component: EpisodeComponent },
+  { path: 'favorites', component: FavoritesComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'popular', component: PopularComponent },
+  { path: 'popular/animedetails/:id', component: AnimeDetailsComponent },
 ]
 
 @NgModule({

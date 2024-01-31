@@ -1,16 +1,20 @@
 <div>
     <div class="img">
-        <img src="../../../assets/images/dummy.jpg" alt="dummy" class="anime-img">
+        <img [src]="animedetails.animeImg" alt="animedetails.animeTitle" class="anime-img">
         <div>
             <img class="icon" src="../../../assets/images/heart-icon.png" alt="heart-icon">
             <b>Add to favorites</b>
         </div>
     </div>
     <div class="description">
-        <h1>Anime Name</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Sint ipsa quis ipsum modi animi nobis consequuntur maxime, necessitatibus maiores quae ullam!
-        Ullam assumenda vero illum repudiandae harum, nam culpa sint.</p>
+        
+        <h1>{{animedetails.animeTitle}}</h1>
+        <div><b>Score: </b> {{animedetails.score}}</div><br>
+        <div><b>Genre: </b><span *ngFor="let genre of animedetails.genres">{{genre}}/ </span></div><br>
+        
+        <p><b>Description:</b><br>{{animedetails.synopsis}}</p>
+        <p><b>Number of episodes:</b> {{animedetails.episodes}} </p>
+        <p><b>Status:</b> {{animedetails.status}}</p>
     </div>
 </div>
 <div class="episodes">

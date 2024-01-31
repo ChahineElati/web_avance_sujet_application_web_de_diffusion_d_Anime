@@ -7,10 +7,14 @@ import { Observable, map } from 'rxjs';
 })
 export class AnimeService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getPopular() : Observable<any> {
+  getPopular(): Observable<any> {
     return this.http.get("http://localhost:5000/popular");
+  }
+
+  getAnimeInfo(id: number): Observable<any> {
+    return this.http.get("http://localhost:5000/anime/" + id);
   }
 
 }
