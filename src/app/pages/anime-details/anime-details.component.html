@@ -7,12 +7,12 @@
         </div>
     </div>
     <div class="description">
-        
+
         <h1>{{animedetails.animeTitle}}</h1>
         <div><b>Score: </b> {{animedetails.score}}</div><br>
         <div><b>Genre: </b><span *ngFor="let genre of animedetails.genres">{{genre}}/ </span></div><br>
         <p><b>Description:</b><br>{{animedetails.synopsis}}</p>
-        <p><b>Number of episodes:</b> {{animedetails.episodes}} </p>
+        <p><b>Number of episodes:</b> {{animedetails.episodes!=null?animedetails.episodes: "Not finished yet"}} </p>
         <p><b>Status:</b> {{animedetails.status}}</p>
     </div>
 </div>

@@ -17,6 +17,7 @@ import { EpisodeComponent } from './pages/episode/episode.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { PopularComponent } from './pages/popular/popular.component';
+import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'popular', component: PopularComponent },
   { path: 'popular/animedetails/:id', component: AnimeDetailsComponent },
+  { path: 'createaccount', component: CreateAccountComponent}
 ]
 
 @NgModule({
@@ -45,6 +47,7 @@ const routes: Routes = [
     ProfileComponent,
     FavoritesComponent,
     PopularComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,

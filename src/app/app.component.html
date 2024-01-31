@@ -1,22 +1,38 @@
 <div class="header">
     <nav>
-        <a routerLink=""><li>Home</li></a>
-        <a routerLink="categories"><li>Anime List</li></a>
-        <a routerLink="popular"><li>Popular</li></a>
+        <a routerLink="">
+            <li>Home</li>
+        </a>
+        <a routerLink="categories">
+            <li>Anime List</li>
+        </a>
+        <a routerLink="popular">
+            <li>Popular</li>
+        </a>
     </nav>
     <div class="form">
-        <table>
+        <table *ngIf="authenticated==false; else elseblock">
             <tr>
-                <td><app-inp placeHolder="Email"></app-inp></td>
-                <td><app-inp type="password" placeHolder="Password"></app-inp></td>
-                <td><app-btn value="Sign In" color="#345DA7"></app-btn></td>
+                <td><input type="email" placeHolder="Email" [(ngModel)]="email"></td>
+                <td><input type="password" placeHolder="Password" [(ngModel)]="pw"></td>
+                <td><app-btn (click)="login()" value="Sign In" color="#345DA7"></app-btn></td>
             </tr>
             <tr>
                 <td></td>
                 <td>Forgot Password</td>
-                <td>Create Account</td>
+                <a routerLink="createaccount">
+                    <td>Create Account</td>
+                </a>
             </tr>
         </table>
+        <ng-template #elseblock>
+            <table>
+                <tr>
+                    <td>{{loggedUser.name}}</td>
+                    <td><app-btn (click)="logout()" value="Sign Out" color="#345DA7"></app-btn></td>
+                </tr>
+            </table>
+        </ng-template>
     </div>
 </div>
 

@@ -8,7 +8,7 @@ require("dotenv").config();
 //configure express instance
 const app = express();
 app.use(cors());
-app.use(express.json()) 
+app.use(express.json())
 
 //mongodb
 const client = new MongoClient(process.env.DB_URI, {
@@ -28,14 +28,22 @@ async function connectToMongo() {
 }
 
 //crud
+async function getbygenre() {
+    console.log(await anigo.getAllAnime());
+}
+
 async function createUserDocument(collection, name, email, pw) {
     const UserDocument = {
         name: name,
         email: email,
         password: pw,
     };
- 
+
     await collection.insertOne(UserDocument);
+}
+
+async function findOneUser(collection, email) {
+    return await collection.findOne({ email: email });
 }
 
 async function createUser(name, email, pw) {
@@ -46,6 +54,18 @@ async function createUser(name, email, pw) {
         const collection = db.collection('users');
         await createUserDocument(collection, name, email, pw);
         console.log("user created");
+    } finally {
+        await mongoClient.close();
+    }
+}
+
+async function findUser(email) {
+    let mongoClient;
+    try {
+        mongoClient = await connectToMongo();
+        const db = mongoClient.db('anime');
+        const collection = db.collection('users');
+        return await findOneUser(collection, email);
     } finally {
         await mongoClient.close();
     }
@@ -69,6 +89,9 @@ app.get("/popular", (req, res) => {
 app.get("/anime/:id", (req, res) => {
     getAnimeInfo(req.params.id).then((data) => res.json(data));
 });
+app.get("/user/:email", (req, res) => {
+    findUser(req.params.email).then(data => res.json(data));
+})
 app.post("/user", (req, res) => {
     console.log(req.body);
     createUser(req.body.name, req.body.email, req.body.password).then(res.end());
@@ -77,5 +100,5 @@ app.post("/user", (req, res) => {
 //start server
 app.listen(PORT, () => {
     console.log(`backend listening on port ${PORT}`);
-    console.log(process.env.DB_URI);
+    getbygenre();
 })
